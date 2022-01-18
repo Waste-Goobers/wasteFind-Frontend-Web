@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import {
   withScriptjs,
   withGoogleMap,
@@ -13,8 +13,8 @@ const Map = withScriptjs(
       defaultCenter={{ lat: 39.9126519, lng: 32.7544914 }}
       onClick={(e) => props.onMapClick(e)}
     >
-      {props.marks.map((mark, index) => (
-        <Marker key={index} position={mark} />
+      {props.marks.map((mark) => (
+        <Marker key={mark.id} position={mark.location} title={mark.name} />
       ))}
     </GoogleMap>
   ))
