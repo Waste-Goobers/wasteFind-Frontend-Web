@@ -1,7 +1,10 @@
 import { Input, Row, Form, notification } from 'antd';
+import axios from 'axios';
 import React, { useState } from 'react';
 import MapComponent from '../MapComponent/MapComponent';
 import './ZipcodeSearch.scss';
+
+const baseUrl = 'http://localhost:3000';
 
 const { Search } = Input;
 const fake_marks = [
@@ -14,12 +17,12 @@ const fake_marks = [
     lng: 32.7677681,
   },
 ];
+
 function ZipcodeSearch() {
   const [mapOpen, setMapOpen] = useState(false);
+  const [markersObject, setMarkersObject] = useState({});
 
   function onSearch(value) {
-    console.log('searched' + value);
-
     if (!isNumeric(value)) {
       notification.info({
         message: `Zipcode should be valid number`,
@@ -33,8 +36,7 @@ function ZipcodeSearch() {
         placement: 'topRight',
       });
     } else {
-      console.log('nice');
-      renderMap(value);
+      handleGetMarkers(value);
     }
   }
 
@@ -46,11 +48,35 @@ function ZipcodeSearch() {
     ); // ...and ensure strings of whitespace fail
   }
 
-  function renderMap(value) {
-    if (value === '06370') {
-      setMapOpen(true);
+  async function handleGetMarkers(zipcode) {
+    try {
+      const response = await axios.post(`${baseUrl}/mapping/zipcode`, {
+        zipcode: zipcode,
+      });
+
+      if (response.status === 200) {
+        setMarkersObject(response.data.recycle_centers);
+        renderMap(zipcode);
+        notification.success({
+          message: `Recycle Centers Found`,
+          description: 'You can find in the map below',
+          placement: 'topRight',
+        });
+      }
+    } catch (error) {
+      console.log(error);
+      notification.error({
+        message: `Zipcode should 5 number`,
+        description: 'Try again, Zipcode should be valid 5 number.',
+        placement: 'topRight',
+      });
     }
   }
+
+  function renderMap(value) {
+    setMapOpen(true);
+  }
+
   return (
     <div className="zipcodeSearchContainer">
       <div className="zipcodeSearch">
@@ -74,7 +100,7 @@ function ZipcodeSearch() {
         </Row>
       </div>
 
-      {mapOpen && <MapComponent marks={fake_marks} />}
+      {mapOpen && <MapComponent marks={markersObject} />}
     </div>
   );
 }
