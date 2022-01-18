@@ -5,4 +5,13 @@
   padding: 2em 0;
   height: 250px;
   bottom: 0;
+
+  &-logo-Icon {
+    height: 200px;
+    &-container {
+      height: 220px;
+      border-radius: 110px;
+      background-color: #e6e0cd;
+    }
+  }
 }
