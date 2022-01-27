@@ -14,7 +14,11 @@ const Map = withScriptjs(
       onClick={(e) => props.onMapClick(e)}
     >
       {props.marks.map((mark) => (
-        <Marker key={mark.id} position={mark.location} title={mark.name} />
+        <Marker
+          key={mark.id}
+          position={mark.location}
+          title={mark.name + ' - ' + mark.type[0]}
+        />
       ))}
     </GoogleMap>
   ))
@@ -22,7 +26,7 @@ const Map = withScriptjs(
 
 function MapComponent({ marks }) {
   useEffect(() => {
-    console.log('map rendered');
+    console.log(marks);
   }, []);
 
   return (
