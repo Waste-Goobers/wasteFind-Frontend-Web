@@ -1,6 +1,7 @@
 import { Input, Row, Form, notification } from 'antd';
 import axios from 'axios';
 import React, { useState } from 'react';
+import Articles from '../Articles';
 import MapComponent from '../MapComponent/MapComponent';
 import './ZipcodeSearch.scss';
 
@@ -100,7 +101,7 @@ function ZipcodeSearch() {
         </Row>
       </div>
 
-      {mapOpen && <MapComponent marks={markersObject} />}
+      {mapOpen ? <MapComponent marks={markersObject} /> : <Articles />}
     </div>
   );
 }

@@ -13,4 +13,17 @@
       height: 220px;
     }
   }
+
+  &-title {
+    font-weight: 800;
+    font-size: 24px;
+    color: #fff;
+    margin: 5px;
+  }
+  &-subtitle {
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 5px;
+  }
 }
