@@ -7,29 +7,24 @@ function Footer() {
     <div className="footer">
       <Row justify="space-around">
         <div style={{ width: '40%' }}>
-          <Row justify="space-around">
+          <Row justify="space-between">
+            <div>
+              <h3 className="footer-title">About Us</h3>
+              <h5 className="footer-subtitle">
+                WasteFind provides solutions for society and material collectors
+                who want to recycle their waste with the help of Image
+                processing and use the mapping/routing features for recycling
+                centers in their living areas easily at once by earning coins.
+                Our project aims to encourage recycling and turn it into a habit
+                for everyone who wants to contribute to natural recycling but
+                doesn't know-how.
+              </h5>
+            </div>
             <div>
               <h3 className="footer-title">Services</h3>
               <h5 className="footer-subtitle">Material Analysis</h5>
               <h5 className="footer-subtitle">Recycle Tracker</h5>
               <h5 className="footer-subtitle">Mapping Recycle Centers</h5>
-            </div>
-            <div>
-              <h3 className="footer-title">About Us</h3>
-              <h5 className="footer-subtitle">
-                WasteFind is Gazi University graduation project.
-                <br />
-                We developed multi service application for recycling.
-                <br />
-                Our project targets the SOA based professional <br />
-                development principles.
-              </h5>
-            </div>
-            <div>
-              <h3 className="footer-title">Team</h3>
-              <h5 className="footer-subtitle">Erkin Berk Türe</h5>
-              <h5 className="footer-subtitle">Doğukan Okçu</h5>
-              <h5 className="footer-subtitle">Mustafa Akgün</h5>
             </div>
           </Row>
         </div>
@@ -39,8 +34,12 @@ function Footer() {
       </Row>
 
       <Row justify="center">
-        <small>
-          <em>wasteFind is non profit graduation project</em>
+        <small style={{ textAlign: 'center' }}>
+          <em>
+            Copyright © 2022 WasteFind
+            <br />
+            All Rights Reserved
+          </em>
         </small>
       </Row>
     </div>

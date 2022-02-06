@@ -1,9 +1,10 @@
-import { Input, Row, Form, notification } from 'antd';
+import { Input, Row, Form, notification, Card, Col } from 'antd';
 import axios from 'axios';
 import React, { useState } from 'react';
 import Articles from '../Articles';
 import MapComponent from '../MapComponent/MapComponent';
 import './ZipcodeSearch.scss';
+import bg_img from '../../public/world.svg';
 
 const baseUrl = 'http://localhost:3000';
 
@@ -82,21 +83,40 @@ function ZipcodeSearch() {
     <div className="zipcodeSearchContainer">
       <div className="zipcodeSearch">
         <Row justify="center">
-          <div className="zipcodeSearch-title-container">
-            <h2 className="zipcodeSearch-title">Find Where, Recycle easier</h2>
-            <h2 className="zipcodeSearch-title2">
-              With Zipcode you can find Recycle Centers around the location
-            </h2>
-          </div>
-        </Row>
-        <Row justify="center">
           <div>
-            <Search
-              placeholder="Enter a Zipcode"
-              onSearch={onSearch}
-              className="zipcodeSearch-searchbox"
-              size="large"
-            />
+            <Row justify="center">
+              <div className="zipcodeSearch-title-container">
+                <h2 className="zipcodeSearch-title">
+                  Find Where, Recycle easier
+                </h2>
+                <h2 className="zipcodeSearch-title2">
+                  With Zipcode you can find Recycle Centers around the location
+                </h2>
+              </div>
+            </Row>
+            <Row justify="center">
+              <div>
+                <Search
+                  placeholder="Enter a Zipcode"
+                  onSearch={onSearch}
+                  className="zipcodeSearch-searchbox"
+                  size="large"
+                />
+              </div>
+            </Row>
+          </div>
+          <div>
+            <Col xs={0} sm={0} md={0} lg={24} xl={24}>
+              <img
+                alt="example"
+                style={{
+                  height: '240px',
+                  objectFit: 'cover',
+                  marginLeft: '30px',
+                }}
+                src={bg_img}
+              />
+            </Col>
           </div>
         </Row>
       </div>

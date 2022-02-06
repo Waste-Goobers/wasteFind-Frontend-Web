@@ -1,32 +1,36 @@
 import { Avatar, Card, Row } from 'antd';
 import React from 'react';
-import logo1 from '../public/Group1.png';
+import illus1 from '../public/illus1.png';
+import illus2 from '../public/illus2.png';
+import illus3 from '../public/illus3.png';
+import illus4 from '../public/illus4.png';
 import logo2 from '../public/Group3.png';
+
 const { Meta } = Card;
 const articles = [
   {
     id: 1,
-    title: 'WasteFind ı Keşfedin!',
-    text: 'Web veya mobil uygulamamızdan geri dönüşüm seferberliğinizi başlatabilirsiniz.',
+    title: 'Find Nearest Recycle Centers',
+    text: ' ',
     author: 'Erkin',
     date: '27.01.22',
-    img: logo1,
+    img: illus2,
   },
   {
     id: 2,
-    title: 'Bana En Yakın Geri Dönüşüm Noktasını Nasıl Bulabilirim?',
-    text: 'Web veya mobil uygulamamızdan size en yakın geri dönüşüm noktalarını bulabilirsiniz.',
+    title: 'Find Waste Material Type with Scan',
+    text: ' ',
     author: 'Erkin',
     date: '27.01.22',
-    img: logo2,
+    img: illus1,
   },
   {
     id: 3,
-    title: 'Atık Analizi Nasıl Yapabilirim',
-    text: 'Mobil uygulamamızdan geri dönüştürmek istediğiniz atığınızı taratarak bulabilirsiniz',
+    title: 'Track and Share Your Recycle History',
+    text: ' ',
     author: 'Erkin',
     date: '27.01.22',
-    img: logo1,
+    img: illus4,
   },
 ];
 
@@ -39,23 +43,24 @@ function Articles() {
             <Card
               hoverable="true"
               key={article.id}
-              style={{ width: 320, margin: '10px' }}
+              style={{
+                width: 320,
+                margin: '10px',
+                borderRadius: '8%',
+                padding: '13px',
+              }}
               cover={
                 <img
                   alt="example"
                   style={{
-                    maxHeight: '160px',
+                    height: '240px',
                     objectFit: 'cover',
                   }}
                   src={article.img}
                 />
               }
             >
-              <Meta
-                avatar={<Avatar src={logo2} />}
-                title={article.title}
-                description={article.text}
-              />
+              <h2 style={{ textAlign: 'center' }}>{article.title}</h2>
             </Card>
           );
         })}

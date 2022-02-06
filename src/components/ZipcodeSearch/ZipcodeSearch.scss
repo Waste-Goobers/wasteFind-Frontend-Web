@@ -3,7 +3,6 @@
     background-color: #e6e0cd;
     padding-bottom: 30px;
   }
-
   padding-top: 200px;
   background-color: #01a263;
   height: 551px;
@@ -14,17 +13,17 @@
       width: 360px;
     }
   }
-
   &-title-container {
     padding: 10px;
   }
   &-title {
     color: #fff;
     font-size: 34px;
+    text-align: center;
   }
-
   &-title2 {
     color: #fff;
+    text-align: center;
     font-size: 22px;
   }
   .ant-input-lg {
