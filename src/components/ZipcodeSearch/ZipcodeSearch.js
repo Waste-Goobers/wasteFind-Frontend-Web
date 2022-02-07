@@ -87,7 +87,7 @@ function ZipcodeSearch() {
             <Row justify="center">
               <div className="zipcodeSearch-title-container">
                 <h2 className="zipcodeSearch-title">
-                  Find Where, Recycle easier
+                  Find Where, Recycle Easier
                 </h2>
                 <h2 className="zipcodeSearch-title2">
                   With Zipcode you can find Recycle Centers around the location

@@ -37,6 +37,11 @@ const articles = [
 function Articles() {
   return (
     <div style={{ margin: '40px' }}>
+      <Row justify="center">
+        <h1 style={{ color: '#444', fontSize: '34px' }}>
+          How WasteFind Helps?
+        </h1>
+      </Row>
       <Row justify="space-around">
         {articles.map((article) => {
           return (
@@ -60,7 +65,9 @@ function Articles() {
                 />
               }
             >
-              <h2 style={{ textAlign: 'center' }}>{article.title}</h2>
+              <h2 style={{ textAlign: 'center', color: '#444' }}>
+                {article.title}
+              </h2>
             </Card>
           );
         })}
