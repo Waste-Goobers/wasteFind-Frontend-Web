@@ -32,14 +32,14 @@ function MapComponent({ marks }) {
 
   return (
     <div style={{ margin: '30px', borderRadius: '15px ' }}>
-      <Map
+      {/*<Map
         googleMapURL={`YOURKEY`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `500px` }} />}
         mapElement={<div style={{ height: `100%`, borderRadius: '25px ' }} />}
         marks={marks}
         onMapClick={() => console.log('clicked')}
-      />
+  />*/}
     </div>
   );
 }
