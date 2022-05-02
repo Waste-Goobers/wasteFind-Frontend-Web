@@ -33,7 +33,7 @@ function MapComponent({ marks }) {
   return (
     <div style={{ margin: '30px', borderRadius: '15px ' }}>
       <Map
-        googleMapURL={`http://maps.googleapis.com/maps/api/js?key=${process.env.REACT_APP_API_KEY}`}
+        googleMapURL={`YOURKEY`}
         loadingElement={<div style={{ height: `100%` }} />}
         containerElement={<div style={{ height: `500px` }} />}
         mapElement={<div style={{ height: `100%`, borderRadius: '25px ' }} />}
