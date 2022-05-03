@@ -1,10 +1,8 @@
-import { Avatar, Card, Row } from 'antd';
+import { Card, Row } from 'antd';
 import React from 'react';
 import illus1 from '../public/illus1.png';
 import illus2 from '../public/illus2.png';
-import illus3 from '../public/illus3.png';
 import illus4 from '../public/illus4.png';
-import logo2 from '../public/Group3.png';
 
 const { Meta } = Card;
 const articles = [

@@ -21,7 +21,12 @@ function HomePage() {
                 src={mgbig}
               />
             </Col>
-            <Content />
+          </Row>
+          <Row justify="end">
+            <Col xs={24} sm={24} md={20} lg={20} xl={12} xxl={12}>
+              <Content />
+            </Col>
+            <Col xs={0} sm={0} md={0} lg={0} xl={12} xxl={8}></Col>
           </Row>
         </div>
       </div>

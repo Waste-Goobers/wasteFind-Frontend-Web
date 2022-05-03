@@ -29,7 +29,6 @@ function Content() {
           the video below and GitHub organization will be explanatory for what
           we did 21-22 fall semester.
           <br className="breakline" />
-          Cheers <span className="emoji">🥳</span>
         </p>
       </div>
     </Col>

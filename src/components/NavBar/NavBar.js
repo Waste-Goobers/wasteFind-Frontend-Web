@@ -1,4 +1,4 @@
-import { Button, Row } from 'antd';
+import { Button, Col, Row } from 'antd';
 import React from 'react';
 import './NavBar.scss';
 import logo from '../../public/Group1.png';
@@ -12,9 +12,7 @@ function NavBar({ setPage, page }) {
           <Row justify="space-between">
             <img className="navbar-logo" src={logo} alt="logo" />
             <Button
-              style={{
-                marginTop: '20px',
-              }}
+              className="marginButtons"
               type="link"
               onClick={() => setPage('home-page')}
             >
@@ -23,7 +21,7 @@ function NavBar({ setPage, page }) {
               </h3>
             </Button>
             <Button
-              style={{ marginTop: '20px' }}
+              className="marginButtons"
               type="link"
               onClick={() => setPage('map-page')}
             >
@@ -31,10 +29,10 @@ function NavBar({ setPage, page }) {
                 Find Recycle Centers
               </h3>
             </Button>
-            <div>
+            <Col xs={0} sm={0} md={1}>
               <FaRecycle className="navbar-logo-icon" />
               <div className="navbar-logo-icon-text">Ankara</div>
-            </div>
+            </Col>
           </Row>
         </div>
       </Row>

@@ -2,7 +2,6 @@ import { Input, Row, notification, Col } from 'antd';
 import axios from 'axios';
 import React, { useState } from 'react';
 import Articles from '../Articles';
-//import MapComponent from '../MapComponent/MapComponent';
 import './ZipcodeSearch.scss';
 import bg_img from '../../public/world.svg';
 
